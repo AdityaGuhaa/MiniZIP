@@ -1,0 +1,15 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+
+# Generated archives
+*.mzip
+
+# Extracted / output folders
+extracted_folder/
+test_folder/
+
+# OS files
+.DS_Store
+Thumbs.db
