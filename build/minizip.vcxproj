@@ -372,6 +372,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\filesystem\file_scanner.cpp" />
     <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\archive\archive_writer.cpp" />
     <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\archive\archive_reader.cpp" />
+    <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\compression\huffman.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

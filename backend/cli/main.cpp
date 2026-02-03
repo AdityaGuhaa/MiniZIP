@@ -1,12 +1,39 @@
 #include <iostream>
 #include <filesystem>
+#include <string>
+#include <vector>
 
 #include "filesystem/file_scanner.h"
 #include "archive/archive_writer.h"
-#include "common/errors.h"
 #include "archive/archive_reader.h"
+#include "compression/huffman.h"
+#include "common/errors.h"
 
 namespace fs = std::filesystem;
+
+// ---------------- HUFFMAN TEST (PHASE 4.1) ----------------
+std::vector<uint8_t> toBytes(const std::string& s)
+{
+    return std::vector<uint8_t>(s.begin(), s.end());
+}
+
+void testHuffman()
+{
+    std::string text = "aaabbcdddddddd";
+    auto data = toBytes(text);
+
+    auto tree  = Huffman::buildTree(data);
+    auto table = Huffman::buildCodeTable(tree);
+
+    auto encoded = Huffman::encode(data, table);
+    auto decoded = Huffman::decode(encoded, tree);
+
+    std::string result(decoded.begin(), decoded.end());
+
+    std::cout << "[HUFFMAN TEST]\n";
+    std::cout << "Original: " << text << "\n";
+    std::cout << "Decoded : " << result << "\n\n";
+}
 
 int main(int argc, char* argv[])
 {
@@ -45,7 +72,7 @@ int main(int argc, char* argv[])
                   << outputPath << "\n";
     }
 
-    // ---------------- EXTRACT (later) ----------------
+    // ---------------- EXTRACT ----------------
     else if (command == "extract") {
 
         if (!ArchiveReader::extract(inputPath, outputPath)) {

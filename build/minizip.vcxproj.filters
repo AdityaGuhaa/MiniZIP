@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\archive\archive_reader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\adityaguha\Desktop\MiniZIP++\backend\compression\huffman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\adityaguha\Desktop\MiniZIP++\CMakeLists.txt" />

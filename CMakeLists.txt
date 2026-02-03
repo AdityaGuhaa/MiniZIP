@@ -9,6 +9,7 @@ add_executable(minizip
     backend/filesystem/file_scanner.cpp
     backend/archive/archive_writer.cpp
     backend/archive/archive_reader.cpp
+    backend/compression/huffman.cpp
 )
 
 target_include_directories(minizip PRIVATE backend)
