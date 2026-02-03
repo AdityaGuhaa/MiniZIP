@@ -1,0 +1,3 @@
+C:/Users/adityaguha/Desktop/MiniZIP++/build/CMakeFiles/minizip.dir
+C:/Users/adityaguha/Desktop/MiniZIP++/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/adityaguha/Desktop/MiniZIP++/build/CMakeFiles/ZERO_CHECK.dir
